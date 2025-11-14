@@ -1,0 +1,12 @@
+# Simulink build folder
+/slprj/
+
+# Simulink compiled files
+*.slxc
+
+# Optional common MATLAB/Simulink files you may want to ignore
+*.asv         # autosave
+*.mldatx      # model data set
+*.log
+*.rpt
+*.mex*        # compiled MEX files
