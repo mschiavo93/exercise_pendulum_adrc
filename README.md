@@ -1,3 +1,4 @@
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mschiavo93/exercise_pendulum_adrc&file=https://github.com/mschiavo93/exercise_pendulum_adrc/blob/main/pendulum_exercise.mlx)
 
 # Pendulum exercise
 # 1. Introduction & System Modeling
@@ -190,4 +191,5 @@ For enhanced set\-point racking performance:
 
 -  Controller bandwidth: `ω_c = 4 rad/s` 
 -  Observer ratio: `keo = 5` 
+
 -  Settling time: ~1.5 seconds 
