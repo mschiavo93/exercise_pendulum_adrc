@@ -50,8 +50,8 @@ Before controlling the actual pendulum, we validate our ADRC implementation on a
 # 3. Pendulum Model Validation
 ## 3.1 Open\-Loop Response Verification
 ### **Test 1:** Free Oscillation from Non\-Zero Angle
--  Initial condition: `θ = π/2 rad` 
--  Control: Manual mode with `u_manual = 0` 
+-  Initial condition: θ = π/2 rad 
+-  Control: Manual mode with u_manual = 0 
 -  Disturbance: Enabled at t = 5s 
 
 **Expected Behavior:** Damped oscillations settling to vertical position (θ = 0) due to gravity and friction, with visible disturbance effects after t = 5s.
@@ -61,16 +61,16 @@ Before controlling the actual pendulum, we validate our ADRC implementation on a
 **Observation:** The pendulum swings and settles as expected, confirming the basic dynamics (gravity, inertia, friction) are implemented correctly. The disturbance at t=5s creates a clear oscillation.
 
 ### **Test 2:** Static Torque Balance
--  Initial condition: `θ = π/2 rad` 
--  Control: Constant torque `u_manual = M*g*l` 
+-  Initial condition: θ = π/2 rad 
+-  Control: Constant torque u_manual = M*g*l 
 -  Disturbance: Disabled 
 
-**Expected Behavior:** Pendulum remains steady at `π/2 rad because the` applied torque balances gravitational torque.
+**Expected Behavior:** Pendulum remains steady at π/2 rad because the applied torque balances gravitational torque.
 
 ![figure_3.png](./pendulum_exercise_media/figure_3.png)
 ### Test 3: Dynamic Torque Balance
--  Initial condition: `θ = 0 rad` 
--  Control: Constant torque `u_manual = M*g*l/2` 
+-  Initial condition: θ = 0 rad 
+-  Control: Constant torque u_manual = M*g*l/2 
 -  Disturbance: Disabled 
 
 **Expected Behavior:** Pendulum settles at non\-zero angle where applied torque balances gravitational torque.
@@ -94,9 +94,9 @@ We also check the states estimated by the ESO.
 **Configuration:**
 
 -  Control mode: ADRC enabled 
--  Initial conditions: `θ = 0 rad`, `θ_dot = 0 rad/s` 
+-  Initial conditions: θ = 0 rad, θ_dot = 0 rad/s 
 -  Disturbance: Enabled 
--  Observer bandwidth: keso `= 20`  
+-  Observer bandwidth: `keso = 20`  
 
 **Performance Assessment:**
 
@@ -183,13 +183,14 @@ The ADRC controller successfully meets all control specifications:
 
 For nominal performance with noise:
 
--  Controller bandwidth: `ω_c = 3 rad/s` 
--  Observer ratio: `keo = 7` 
+-  Controller bandwidth: ω_c = 3 rad/s 
+-  Observer ratio: `keso = 7` 
 -  Settling time: ~2 seconds 
 
 For enhanced set\-point racking performance:
 
--  Controller bandwidth: `ω_c = 4 rad/s` 
--  Observer ratio: `keo = 5` 
+-  Controller bandwidth: ω_c = 4 rad/s 
+-  Observer ratio: `keso = 5` 
 
 -  Settling time: ~1.5 seconds 
+
